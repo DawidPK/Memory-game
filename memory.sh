@@ -1,4 +1,12 @@
 #!/bin/bash
+# Author           : s208060@student.pg.edu.pl
+# Created On       : 5.05.2026
+# Last Modified On : 12.05.2026
+# Version          : 1.0
+#
+# Generative AI statement (keep ONE line below, delete the others):
+# * I used GenAI tools for support only (e.g., explanations, debugging, small snippets).
+#
 # ==============================================================
 # memory.sh — punkt wejścia gry Memory
 #
