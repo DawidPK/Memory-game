@@ -29,7 +29,7 @@ select_level () {
     --column="#" \
     --column="Poziom" \
     --width=350 \
-    --height=$(( 120 + ${#level_names[@]} * 35 )) \
+    --height=$(( 120 + ${#level_names[@]} * 100 )) \
     "${zenity_list_args[@]}" 2>/dev/null)
 
   if [ $? -ne 0 ] || [ -z "$chosen" ]; then

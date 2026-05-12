@@ -10,7 +10,10 @@ hidden=()
 states=()
 row_count=0
 total_cards=0
-unknown='#'
+unknown='##'
+
+# Szerokość jednej komórki (znaki + spacje)
+CELL_W=4
 
 init_board () {
   local index="$1"
@@ -31,7 +34,6 @@ init_board () {
     exit 1
   fi
 
-  # Zbuduj pulę kart (każde emoji x2) i potasuj
   local card_pool=()
   for ((i=0; i<required_unique; i++)); do
     card_pool+=("${unique_emojis[$i]}")
@@ -53,25 +55,32 @@ init_board () {
   done
 }
 
+# print_board CUR_COL CUR_ROW
+# Rysuje planszę; komórka [CUR_COL, CUR_ROW] zostaje podświetlona
 print_board () {
-  echo ""
-  printf "   "
-  for ((i=0; i<row_count; i++)); do
-    printf " %d " "$i"
-  done
-  printf "\n"
+  local cur_col="${1:-0}"
+  local cur_row="${2:-0}"
 
-  for ((j=0; j<row_count; j++)); do
-    printf " %d " "$j"
+  for ((j=0; j<row_count; j++)); do 
     for ((i=0; i<row_count; i++)); do
-      local index=$((i + j * row_count))
-      if [ "${states[$index]}" = 1 ]; then
-        printf " %s " "${hidden[$index]}"
+      local idx=$((i + j * row_count))
+      local cell
+      if [ "${states[$idx]}" = 1 ]; then
+        cell="${hidden[$idx]}"
       else
-        printf " %s " "$unknown"
+        cell="$unknown"
+      fi
+
+      if [ "$i" -eq "$cur_col" ] && [ "$j" -eq "$cur_row" ]; then
+        # Podświetlenie kursora: odwrócone kolory
+        tput rev
+        printf '[%s]' "$cell"
+        tput sgr0
+      else
+        printf ' %s ' "$cell"
       fi
     done
-    printf '\n'
+    printf "\n"
   done
-  echo ""
+  printf "\n"
 }
