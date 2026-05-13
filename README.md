@@ -38,16 +38,16 @@ chmod +x memory.sh
 
 ## Struktura plików
 
-memory-game/
-├── memory.sh           # Główny skrypt
-├── levels.conf         # Konfiguracja poziomów
-├── scores.dat          # Tabela wyników (tworzony automatycznie)
-└── modules/            # Katalog z modułami
-    ├── config.sh       # Wczytywanie konfiguracji
-    ├── scores.sh       # System punktacji
-    ├── ui.sh           # Interfejs użytkownika
-    ├── board.sh        # Zarządzanie planszą
-    └── game.sh         # Logika gry
+memory-game/  
+├── memory.sh           Główny skrypt  
+├── levels.conf         Konfiguracja poziomów  
+├── scores.dat          Tabela wyników (tworzony automatycznie)  
+└── modules/            Katalog z modułami  
+&emsp; ├── config.sh       Wczytywanie konfiguracji  
+&emsp; ├── scores.sh       System punktacji  
+&emsp; ├── ui.sh           Interfejs użytkownika  
+&emsp; ├── board.sh        Zarządzanie planszą  
+&emsp; └── game.sh         Logika gry  
 
 ## Użycie
 
