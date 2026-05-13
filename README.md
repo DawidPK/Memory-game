@@ -80,9 +80,9 @@ nazwa_poziomu|rozmiar|emoji1,emoji2,emoji3,...
 
 Przykład:
 
-Łatwy 2x2|2|😈,👽
-Średni 4x4|4|🐶,🐱,🐭,🐹,🦊,🐻,🐼,🐨
-Trudny 6x6|6|🍎,🍊,🍋,🍇,🍓,🍒,🥭,🍍,🥝,🍑,🍈,🫐,🥥,🍌,🍉,🍏,🍐,🍑
+Łatwy 2x2|2|😈,👽  
+Średni 4x4|4|🐶,🐱,🐭,🐹,🦊,🐻,🐼,🐨  
+Trudny 6x6|6|🍎,🍊,🍋,🍇,🍓,🍒,🥭,🍍,🥝,🍑,🍈,🫐,🥥,🍌,🍉,🍏,🍐,🍑  
 
 - nazwa_poziomu - dowolny tekst (nie może zawierać znaku |)
 - rozmiar - liczba całkowita parzysta (2, 4, 6...), określa rozmiar planszy N×N
